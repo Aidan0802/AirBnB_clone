@@ -9,16 +9,16 @@ import cmd
 import sys
 
 
-class Console(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     """Simple command processor example."""
     prompt = "(hbbh) "
 
     def do_EOF(self, line):
-        """Closes the interpreter"""
+        """Quit command to exit the program"""
         return True
 
     def do_quit(self, line):
-        """Closes the interpreter"""
+        """Quit command to exit the program"""
         return True
 
     def emptyline(self):
@@ -27,7 +27,7 @@ class Console(cmd.Cmd):
 
 if __name__ == '__main__':
     if not sys.stdin.isatty():
-        Console().cmdloop()
+        HBNBCommand().cmdloop()
         print()
     else:
-        Console().cmdloop()
+        HBNBCommand().cmdloop()
