@@ -40,7 +40,7 @@ class FileStorage:
                 data = json.load(file)
                 for key, value in data.items():
                     class_name, obj_id = key.split('.')
-                    module_name = 'models.base_model'  # Specify the module name
+                    module_name = 'models.base_model'
                     module = importlib.import_module(module_name)
                     cls = getattr(module, class_name)
                     obj = cls(**value)
